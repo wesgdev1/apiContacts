@@ -11,9 +11,28 @@ app.get("/", (request, response) => {
   response.send("<h1>Esta es la lista de contactos</h1>");
 });
 
-//READ
+//READ ALL
 app.get("/contacts", (request, response) => {
   response.json(contacts);
+});
+
+//READ GET BY ID
+
+app.get("/contacts/:id", (req, res, next) => {
+  const { params = {} } = req;
+  const { id = "" } = params;
+  const contact = contacts.find(function (element) {
+    return id === element.id;
+  });
+
+  if (contact) {
+    res.json(contact);
+  } else {
+    next({
+      statusCode: 404,
+      message: `Note with ${id}, Not Found`,
+    });
+  }
 });
 
 //CREATE
@@ -30,7 +49,7 @@ app.post("/contacts", (req, res) => {
 //ACTUALIZAR
 
 //4. Put (Se envía el body)
-app.put("/contact/:id", (req, res) => {
+app.put("/contacts/:id", (req, res) => {
   const { id } = req.params;
   const { body } = req;
   let contactIndex = contacts.findIndex((contact) => contact.id === id);
@@ -48,7 +67,7 @@ app.put("/contact/:id", (req, res) => {
 
 //ELIMINAR
 
-app.delete("/contact/:id", (req, res) => {
+app.delete("/contacts/:id", (req, res) => {
   const { id } = req.params;
   let contactIndex = contacts.findIndex((contact) => contact.id === id);
 
