@@ -1,6 +1,6 @@
 # API de Contactos
 
-![GitHub](https://img.shields.io/github/license/<wesgdev1>/<apiContacts>)
+![GitHub](https://img.shields.io/github/license/wesgdev1/apiContacts)
 
 ## Descripción
 
