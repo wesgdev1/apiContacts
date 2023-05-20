@@ -15,7 +15,16 @@ La documentación de la API se encuentra disponible en [Swagger UI](https://wesg
 ```shell
 git clone https://github.com/<wesgdev1>/<apiContacts>.git
 
-## Instala dependencia necesarias
+2. Instala las dependencias necesarias.
+
 npm install
+
+3. Inicia el servidor de desarrollo.
+npm start
+
+4. Accede a la API en tu navegador o mediante herramientas como cURL o Postman.
+
+GET http://localhost:3001/contacts
+
 
 
