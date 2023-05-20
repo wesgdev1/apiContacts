@@ -1,5 +1,6 @@
 const swaggerJsdoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
+///const fs = require("fs"); //// lo use para generar archibo json de swagger para pages
 
 const swaggerOptions = {
   definition: {
@@ -20,6 +21,13 @@ const swaggerOptions = {
 };
 
 const swaggerSpec = swaggerJsdoc(swaggerOptions);
+// // Generar la especificación de Swagger en formato JSON
+// const swaggerJson = JSON.stringify(swaggerSpec, null, 2);//// lo use para generar archibo json de swagger para pages
+
+// // Escribir la especificación en un archivo swagger.json
+// fs.writeFileSync("swagger.json", swaggerJson, "utf8");//// lo use para generar archibo json de swagger para pages
+
+// console.log("Swagger specification generated successfully.");//
 
 module.exports = {
   swaggerUi,
