@@ -3,7 +3,14 @@ const { v4: uuidv4 } = require("uuid");
 
 const app = express();
 
-let contacts = [];
+let contacts = [
+  {
+    id: "0c3aea71-6d17-4a0e-ac37-8a0175f790b1",
+    name: "elvergalarwerwerwergrraff34343434FGFGFDFDFDFGDFDFFG",
+    email: "xxxxxxxx@hotmail.com34343RTRTRT4",
+    phone: "QUE CALOR2",
+  },
+];
 
 app.use(express.json());
 
