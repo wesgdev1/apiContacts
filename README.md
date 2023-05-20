@@ -8,7 +8,7 @@ Este proyecto es una API que permite administrar contactos. Proporciona endpoint
 
 ## Documentación
 
-La documentación de la API se encuentra disponible en [Swagger UI](https://<wesgdev1>.github.io/<apiContacts/).
+La documentación de la API se encuentra disponible en [Swagger UI](https://wesgdev1.github.io/apiContacts/).
 
 ## Instalación
 
