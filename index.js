@@ -48,6 +48,18 @@ app.put("/contact/:id", (req, res) => {
 
 //ELIMINAR
 
+app.delete("/contact/:id", (req, res) => {
+  const { id } = req.params;
+  let contactIndex = contacts.findIndex((contact) => contact.id === id);
+
+  if (contactIndex === -1) {
+    return res.status(404).json({ message: "Note not found" });
+  }
+
+  contacts.splice(contactIndex, 1);
+  res.sendStatus(204);
+});
+
 //MANEJO DE ERRORES
 
 app.use((req, res, next) => {
