@@ -31,6 +31,10 @@ app.get("/contacts", (request, response) => {
 
 app.post("/contacts", (req, res) => {
   const { body } = req;
+  const contact = {
+    id: uuidv4(),
+    ...body,
+  };
   contacts.push(body);
   res.status(201).json(body);
 });
