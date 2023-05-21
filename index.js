@@ -1,6 +1,7 @@
 const express = require("express");
 const { v4: uuidv4 } = require("uuid");
 const { swaggerUi, swaggerSpec } = require("./swaggerConfig"); ///////////////////
+var cors = require("cors");
 
 const app = express();
 
