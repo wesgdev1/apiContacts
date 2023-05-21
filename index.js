@@ -1,7 +1,7 @@
 const express = require("express");
 const { v4: uuidv4 } = require("uuid");
 const { swaggerUi, swaggerSpec } = require("./swaggerConfig"); ///////////////////
-var cors = require("cors");
+const cors = require("cors");
 
 const app = express();
 
@@ -13,6 +13,8 @@ let contacts = [
     phone: "QUE CALOR2",
   },
 ];
+
+app.use(cors());
 
 app.use(express.json());
 
