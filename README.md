@@ -26,5 +26,8 @@ npm start
 
 GET http://localhost:3001/contacts
 
+```
 
+## Aprendizaje
 
+Trabajo hecho para practicar proyecto basico de CRUD en una API para makeItReal
