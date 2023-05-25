@@ -38,7 +38,9 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
  */
 
 app.get("/", (request, response) => {
-  response.send("<h1>Esta es la lista de contactos</h1>");
+  response.send(
+    "<h1>Esta es una API para agregar, eliminar, actualizar una lista de contactos</h1>"
+  );
 });
 
 //READ ALL
